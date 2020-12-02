@@ -4,22 +4,28 @@ import Sidebar from './components/Sidebar';
 import List from './components/List';
 import Footer from './components/Footer';
 import Detail from './components/Detail';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useRouteMatch } from 'react-router-dom';
 
-function App() {
+const App = () => {
+  // const getCode = () => {
+
+  // }
+
+  // exact path="/detail/:hexcode"
+
   return (
     <div className="App">
       <Header />
       <Sidebar />
       <Switch>
         <List />
-        <Route>
-          <Detail exact path="/detail/:hexcode" />
+        <Route exact path="/detail/:hexcode">
+          <Detail />
         </Route>
       </Switch>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
