@@ -7,7 +7,7 @@ const List = () => {
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
-  const [entriesPerPage] = useState(5);
+  const [entriesPerPage] = useState(12);
 
   // Gets current page array
   const indexOfLastPage = currentPage * entriesPerPage;
@@ -30,11 +30,12 @@ const List = () => {
           let code = color.code;
           return (
             <li
-              style={{ backgroundColor: code, width: '75px', height: '75px' }}
+              className="color-swatch"
+              style={{ backgroundColor: code }}
               key={color.code}
               onClick={() => showColor(color)}
             >
-              {color.name}
+              <h4>{color.name}</h4>
             </li>
           );
         })}

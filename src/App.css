@@ -30,6 +30,22 @@ footer {
   border: red 2px solid;
 }
 
+.color-swatch {
+  width: 75px;
+  height: 75px;
+  align-items: bottom;
+  margin: 1%;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 7px #888888;
+}
+
+.color-swatch h4 {
+  align-self: baseline;
+  background-color: grey;
+  position: relative;
+}
+
 .pagination {
   border: red 2px solid;
   color: white;
