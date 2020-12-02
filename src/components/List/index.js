@@ -1,15 +1,9 @@
 import React, { useState } from 'react';
 import Pagination from '../Pagination';
-import Detail from '../Detail';
 import { colors } from '../../data/colors.js';
-import { Link, Route } from 'react-router-dom';
-
-{
-  /* <Route exact path={'/detail/:hexId'} exact component={Detail}></Route> */
-}
+import { Link } from 'react-router-dom';
 
 const List = () => {
-  // console.log('COLORS', colors);
   /////////////////
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);

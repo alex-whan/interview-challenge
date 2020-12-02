@@ -19,11 +19,11 @@ const App = () => {
       <Header />
       <Sidebar />
       <Switch>
-        <Route exact path="/">
-          <List />
-        </Route>
         <Route exact path="/color/:hexId">
           <Detail />
+        </Route>
+        <Route path="/">
+          <List />
         </Route>
       </Switch>
       <Footer />
