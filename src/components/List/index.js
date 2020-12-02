@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import Pagination from '../Pagination';
 import { colors } from '../../data/colors.js';
-import { Link } from 'react-router-dom';
+import { Link, Route, useRouteMatch } from 'react-router-dom';
 
-const List = () => {
+const List = ({ match }) => {
   console.log('COLORS', colors);
+  const url = useRouteMatch();
 
   // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
@@ -24,25 +25,25 @@ const List = () => {
     console.log(`You clicked: ${hex.code} (${hex.name})`);
   };
 
+  const colorList = currentEntries.map(color => {
+    let code = color.code;
+    return (
+      <li
+        className="color-swatch"
+        key={color.code}
+        style={{ backgroundColor: code }}
+        onClick={() => showColor(color)}
+      >
+        <Link to={`${url}/${code}`}>
+          <h4>{color.code}</h4>
+        </Link>
+      </li>
+    );
+  });
+
   return (
     <>
-      <ul className="color-list">
-        {currentEntries.map(color => {
-          let code = color.code;
-          return (
-            <li
-              className="color-swatch"
-              style={{ backgroundColor: code }}
-              key={color.code}
-              onClick={() => showColor(color)}
-            >
-              <Link to={`/detail/${code}`}>
-                <h4>{color.code}</h4>
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <ul className="color-list">{colorList}</ul>
       <Pagination
         entriesPerPage={entriesPerPage}
         totalEntries={colors.length}
