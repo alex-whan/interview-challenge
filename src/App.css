@@ -30,6 +30,29 @@ footer {
   border: red 2px solid;
 }
 
+.pagination {
+  border: red 2px solid;
+  color: white;
+}
+
+.pagination a {
+  border: red 2px solid;
+  color: white;
+}
+
+.pagination a:hover {
+  border: red 2px solid;
+  color: white;
+  background-color: blue;
+}
+
+.pagination li {
+  display: inline-block;
+  margin: 1%;
+  padding: 1%;
+  border: red 2px solid;
+}
+
 .sidebar {
   list-style-type: none;
   text-align: left;

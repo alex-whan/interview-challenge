@@ -5,6 +5,7 @@ import { colors } from '../../data/colors.js';
 const List = () => {
   console.log('COLORS', colors);
 
+  // Pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const [entriesPerPage] = useState(5);
 
