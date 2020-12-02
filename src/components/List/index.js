@@ -6,11 +6,14 @@ const List = () => {
   return (
     <>
       <ul>
-        {colors.map(color => (
-          <li style={{ backgroundColor: `{color.code}` }} key={color.code}>
-            {color.name}
-          </li>
-        ))}
+        {colors.map(color => {
+          let code = color.code;
+          return (
+            <li style={{ backgroundColor: code }} key={color.code}>
+              {color.name}
+            </li>
+          );
+        })}
       </ul>
     </>
   );
