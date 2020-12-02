@@ -3,6 +3,7 @@
   background-color: #282c34;
   color: white;
   font-family: 'Source Serif Pro', serif;
+  border: red 2px solid;
 }
 
 .App-logo {
@@ -20,11 +21,21 @@ header {
   display: flex;
   width: 100%;
   align-items: center;
+  border: red 2px solid;
 }
 
 footer {
   width: 100%;
   align-items: center;
+  border: red 2px solid;
+}
+
+.sidebar {
+  list-style-type: none;
+  text-align: left;
+  background-color: grey;
+  max-width: 20%;
+  border: red 2px solid;
 }
 
 .App-header {
