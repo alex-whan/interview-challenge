@@ -7,13 +7,6 @@ import Detail from './components/Detail';
 import { Route, Switch } from 'react-router-dom';
 
 const App = () => {
-  // const getCode = () => {
-
-  // }
-
-  // exact path="/detail/:hexId"
-  // <Route exact path="/detail" component={Detail}></Route>
-
   return (
     <div className="App">
       <Header />

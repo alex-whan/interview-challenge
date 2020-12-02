@@ -4,7 +4,6 @@ import { Link, useParams } from 'react-router-dom';
 const Detail = () => {
   const { hexId } = useParams();
   const hex = `#${hexId}`;
-
   // const color = colors.find(color => color.code === location.hash);
 
   return (
