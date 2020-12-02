@@ -6,7 +6,7 @@ const List = () => {
   console.log('COLORS', colors);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [entriesPerPage] = useState(2);
+  const [entriesPerPage] = useState(5);
 
   // Gets current page array
   const indexOfLastPage = currentPage * entriesPerPage;
@@ -19,7 +19,7 @@ const List = () => {
   return (
     <>
       <ul>
-        {colors.map(color => {
+        {currentEntries.map(color => {
           let code = color.code;
           return (
             <li
