@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Pagination from '../Pagination';
 import { colors } from '../../data/colors.js';
+import { Link } from 'react-router-dom';
 
 const List = () => {
   console.log('COLORS', colors);
@@ -35,7 +36,9 @@ const List = () => {
               key={color.code}
               onClick={() => showColor(color)}
             >
-              <h4>{color.code}</h4>
+              <Link to={`/detail/${code}`}>
+                <h4>{color.code}</h4>
+              </Link>
             </li>
           );
         })}

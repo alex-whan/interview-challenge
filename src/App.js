@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <List />
         <Route>
-          <Detail exact path="/detail" />
+          <Detail exact path="/detail/:hexcode" />
         </Route>
       </Switch>
       <Footer />
