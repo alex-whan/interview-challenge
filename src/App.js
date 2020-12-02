@@ -18,12 +18,14 @@ const App = () => {
     <div className="App">
       <Header />
       <Sidebar />
-      <Route exact path="/">
-        <List />
-      </Route>
-      <Route exact path="/color/:id">
-        <Detail />
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <List />
+        </Route>
+        <Route exact path="/color/:hexId">
+          <Detail />
+        </Route>
+      </Switch>
       <Footer />
     </div>
   );

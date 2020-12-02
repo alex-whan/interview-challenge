@@ -32,8 +32,11 @@ const List = () => {
 
   const colorList = currentEntries.map(color => {
     let code = color.code;
+    let normalizedCode = color.code.slice(1);
+    console.log('COLOR CODE?', color.code);
+    console.log('SHORT CODE', color.code.slice(1));
     return (
-      <Link key={color.code} to={`/color/${color.code}`}>
+      <Link key={color.code} to={`/color/${normalizedCode}`}>
         <li
           className="color-swatch"
           style={{ backgroundColor: code }}
