@@ -6,20 +6,22 @@ import Footer from './components/Footer';
 import Detail from './components/Detail';
 import { Route, Switch } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
       <Sidebar />
       <Switch>
-        <List />
-        <Route>
-          <Detail exact path="/detail/:hexcode" />
+        <Route exact path="/color/:hexId">
+          <Detail />
+        </Route>
+        <Route path="/">
+          <List />
         </Route>
       </Switch>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

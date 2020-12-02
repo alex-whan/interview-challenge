@@ -1,5 +1,6 @@
 import React from 'react';
 import { COLOR_GROUPS } from './constants/color-groups';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   const viewHeight = window.outerHeight;
@@ -7,7 +8,9 @@ const Sidebar = () => {
   return (
     <>
       <div className="sidebar" style={{ height: viewHeight / 3 }}>
-        <button>Random Color</button>
+        <Link to={'/'}>
+          <button>Random Color</button>
+        </Link>
         <ul>
           {COLOR_GROUPS.map(color => (
             <li key={color}>

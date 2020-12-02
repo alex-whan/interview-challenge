@@ -1,14 +1,17 @@
 import React from 'react';
+import { Link, useParams } from 'react-router-dom';
 
-// maybe pass in color hex as props
-// or fetch from dB
-// React Router seems best way to handle this
+const Detail = () => {
+  const { hexId } = useParams();
+  const hex = `#${hexId}`;
+  // const color = colors.find(color => color.code === location.hash);
 
-const Detail = props => {
   return (
     <>
-      <h2>Detail view</h2>
-      <p>Should appear onClick</p>
+      <h2 style={{ color: 'white', backgroundColor: hex }}>
+        Detail view for {hex}
+      </h2>
+      <Link to={'/'}>Clear</Link>
     </>
   );
 };
