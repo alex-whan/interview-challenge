@@ -38,6 +38,11 @@ footer {
   border: red 2px solid;
 }
 
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

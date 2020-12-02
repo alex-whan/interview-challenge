@@ -9,7 +9,10 @@ const List = () => {
         {colors.map(color => {
           let code = color.code;
           return (
-            <li style={{ backgroundColor: code }} key={color.code}>
+            <li
+              style={{ backgroundColor: code, width: '75px', height: '75px' }}
+              key={color.code}
+            >
               {color.name}
             </li>
           );
