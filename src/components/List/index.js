@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Pagination from '../Pagination';
 import { colors } from '../../data/colors.js';
 
 const List = () => {
   console.log('COLORS', colors);
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [entriesPerPage] = useState(2);
+
+  // Gets current page array
+  const indexOfLastPage = currentPage * entriesPerPage;
+  const indexOfFirstPage = indexOfLastPage - entriesPerPage;
+  const currentEntries = colors.slice(indexOfFirstPage, indexOfLastPage);
+
+  // Changes page
+  const paginate = pageNumber => setCurrentPage(pageNumber);
+
   return (
     <>
       <ul>
@@ -18,6 +31,11 @@ const List = () => {
           );
         })}
       </ul>
+      <Pagination
+        entriesPerPage={entriesPerPage}
+        totalEntries={colors.length}
+        paginate={paginate}
+      />
     </>
   );
 };
