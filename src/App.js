@@ -11,18 +11,15 @@ const App = () => {
 
   // }
 
-  // exact path="/detail/:hexcode"
+  // exact path="/detail/:hexId"
+  // <Route exact path="/detail" component={Detail}></Route>
 
   return (
     <div className="App">
       <Header />
       <Sidebar />
-      <Switch>
-        <List />
-        <Route exact path="/detail/:hexcode">
-          <Detail />
-        </Route>
-      </Switch>
+      <Route exact path="/" component={List} />
+      <Route exact path="/color/:hexId" component={Detail} />
       <Footer />
     </div>
   );
