@@ -8,7 +8,7 @@ const Sidebar = () => {
         <button>Random Color</button>
         <ul>
           {COLOR_GROUPS.map(color => (
-            <li>
+            <li key={color}>
               <a>{color}</a>
             </li>
           ))}
