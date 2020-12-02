@@ -2,7 +2,18 @@ import React from 'react';
 import { COLOR_GROUPS } from './constants/color-groups';
 
 const Sidebar = () => {
-  return <h3>This will be the sidebar</h3>;
+  return (
+    <>
+      <button>Random Color</button>
+      <ul>
+        {COLOR_GROUPS.map(color => (
+          <li>
+            <a>{color}</a>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 };
 
 export default Sidebar;
