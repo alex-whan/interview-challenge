@@ -25,7 +25,7 @@ const List = () => {
 
   return (
     <>
-      <ul>
+      <ul className="color-list">
         {currentEntries.map(color => {
           let code = color.code;
           return (
@@ -35,7 +35,7 @@ const List = () => {
               key={color.code}
               onClick={() => showColor(color)}
             >
-              <h4>{color.name}</h4>
+              <h4>{color.code}</h4>
             </li>
           );
         })}

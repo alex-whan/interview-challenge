@@ -24,6 +24,10 @@ header {
   border: red 2px solid;
 }
 
+header form {
+  border: red 2px solid;
+}
+
 footer {
   width: 100%;
   align-items: center;
@@ -34,16 +38,26 @@ footer {
   width: 75px;
   height: 75px;
   align-items: bottom;
-  margin: 1%;
+  margin: 2%;
   border: 1px solid white;
   border-radius: 5px;
   box-shadow: 0px 1px 7px #888888;
+  list-style-type: none;
+  display: inline-block;
+  vertical-align: bottom;
 }
 
 .color-swatch h4 {
   align-self: baseline;
   background-color: grey;
   position: relative;
+  vertical-align: bottom;
+}
+
+.color-list {
+  max-width: 75%;
+  border: red 2px solid;
+  margin: 0 auto;
 }
 
 .pagination {
@@ -71,15 +85,18 @@ footer {
 
 .sidebar {
   list-style-type: none;
+  /* display: inline-block; */
   text-align: left;
   background-color: grey;
-  max-width: 20%;
+  max-width: 10%;
   border: red 2px solid;
+  height: 100%;
 }
 
-li {
+.sidebar > * {
   list-style-type: none;
-  display: inline-block;
+  display: block;
+  border: red 2px solid;
 }
 
 .App-header {
@@ -95,13 +112,4 @@ li {
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
