@@ -16,6 +16,12 @@ const List = () => {
   // Changes page
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
+  // Each list item also needs a link to its own color detail view
+
+  const showColor = hex => {
+    console.log(`You clicked: ${hex.code} (${hex.name})`);
+  };
+
   return (
     <>
       <ul>
@@ -25,6 +31,7 @@ const List = () => {
             <li
               style={{ backgroundColor: code, width: '75px', height: '75px' }}
               key={color.code}
+              onClick={() => showColor(color)}
             >
               {color.name}
             </li>
