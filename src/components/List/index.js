@@ -33,16 +33,15 @@ const List = () => {
   const colorList = currentEntries.map(color => {
     let code = color.code;
     return (
-      <li
-        className="color-swatch"
-        key={color.code}
-        style={{ backgroundColor: code }}
-        onClick={() => showColor(color)}
-      >
-        <h4>
-          <Link to={`/color/${color.code}`}>{color.code}</Link>
-        </h4>
-      </li>
+      <Link key={color.code} to={`/color/${color.code}`}>
+        <li
+          className="color-swatch"
+          style={{ backgroundColor: code }}
+          onClick={() => showColor(color)}
+        >
+          <h4>{color.code}</h4>
+        </li>
+      </Link>
     );
   });
 

@@ -18,8 +18,12 @@ const App = () => {
     <div className="App">
       <Header />
       <Sidebar />
-      <Route exact path="/" component={List} />
-      <Route exact path="/color/:hexId" component={Detail} />
+      <Route exact path="/">
+        <List />
+      </Route>
+      <Route exact path="/color/:id">
+        <Detail />
+      </Route>
       <Footer />
     </div>
   );
