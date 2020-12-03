@@ -4,11 +4,7 @@
   color: #363c3d;
   font-family: 'Source Serif Pro', serif;
   border: red 2px solid;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 100vh;
 }
 
 header {
@@ -17,10 +13,13 @@ header {
   width: 100%;
   align-items: center;
   border: red 2px solid;
+  clear: both;
 }
 
-header form {
+header input {
   border: red 2px solid;
+  border-radius: 5px;
+  float: left;
 }
 
 footer {
@@ -56,6 +55,7 @@ footer {
   border: red 2px solid;
   margin: 0 auto;
   display: flex wrap;
+  height: 50vh;
 }
 
 .pagination {
@@ -74,6 +74,12 @@ footer {
   background-color: blue;
 }
 
+.pagination a:active {
+  color: red;
+  text-decoration: underline;
+  background-color: blue;
+}
+
 .pagination li {
   display: inline-block;
   margin: 1%;
@@ -82,19 +88,20 @@ footer {
 }
 
 .sidebar {
-  list-style-type: none;
-  /* display: inline-block; */
-  text-align: left;
   background-color: #d6d8d8;
-  max-width: 10%;
   border: red 2px solid;
+  display: flex;
+  flex-direction: column;
   height: 100%;
+  list-style-type: none;
+  max-width: 20%;
+  position: fixed;
 }
 
-.sidebar > * {
+.sidebar > div > * {
   list-style-type: none;
-  display: block;
   border: red 2px solid;
+  text-align: left;
 }
 
 .App-header {

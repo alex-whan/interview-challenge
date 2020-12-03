@@ -12,7 +12,7 @@ const Sidebar = props => {
   const getRandom = () => {
     let result = randomizer(colors);
     setRandomColor(result);
-    console.log('RANDOM COLOR IS:', result);
+    // console.log('RANDOM COLOR IS:', result);
   };
 
   const colorGroups = COLOR_GROUPS.map(color => (
@@ -24,10 +24,14 @@ const Sidebar = props => {
   return (
     <>
       <div className="sidebar" style={{ height: viewHeight / 4 }}>
-        <Link to={`/color/${randomColor.code.slice(1)}`}>
-          <button onClick={getRandom}>Random Color</button>
-        </Link>
-        <ul>{colorGroups}</ul>
+        <div className="button">
+          <Link to={`/color/${randomColor.code.slice(1)}`}>
+            <button onClick={getRandom}>Random Color</button>
+          </Link>
+        </div>
+        <div className="sidebar-nav">
+          <ul>{colorGroups}</ul>
+        </div>
       </div>
     </>
   );
