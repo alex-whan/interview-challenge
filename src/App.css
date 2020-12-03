@@ -76,6 +76,7 @@ header {
 
 .sidebar-nav > ul > li > a:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 
 .sidebar-nav > ul > li > a:active {
@@ -97,6 +98,7 @@ header {
   margin-top: 20%;
   margin-bottom: 10%;
   border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .color-swatch-section {
@@ -114,18 +116,6 @@ header {
   margin-bottom: 2%;
   justify-content: space-around;
   row-gap: 5%;
-
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
-  justify-content: space-evenly;
-  height: 80vh;
-  align-items: start;
-  margin: 1rem;
-  text-align: left;
-  grid-gap: 2rem; */
-
-  /* grid-column: 2 / 6;
-  grid-row: 1/ 9; */
 }
 
 a > .color-card {
@@ -144,7 +134,6 @@ a:link {
   border-radius: 0.5rem;
   height: 175px;
   width: 150px;
-  /* padding: 5px; */
 }
 
 .color-block {
@@ -186,7 +175,6 @@ a:link {
   border-radius: 0.65rem;
   height: 50vh;
   width: 70vw;
-  /* padding: 5px; */
   margin: 5%;
 }
 
@@ -212,6 +200,7 @@ a:link {
   margin-bottom: 10%;
   border-radius: 0.5rem;
   background-color: white;
+  cursor: pointer;
 }
 
 .pagination {
