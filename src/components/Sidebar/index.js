@@ -5,8 +5,6 @@ import { randomizer } from '../../utils/utils';
 import { colors } from '../../data/colors';
 
 const Sidebar = props => {
-  const viewHeight = window.outerHeight;
-  // style={{ height: viewHeight }}
   let initialResult = randomizer(colors);
   const [randomColor, setRandomColor] = useState(initialResult);
   const getRandom = () => {
@@ -23,7 +21,7 @@ const Sidebar = props => {
 
   return (
     <>
-      <div className="sidebar" style={{ height: viewHeight / 4 }}>
+      <div className="sidebar">
         <div className="button">
           <Link to={`/color/${randomColor.code.slice(1)}`}>
             <button onClick={getRandom}>Random Color</button>
