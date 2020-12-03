@@ -1,18 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { COLOR_GROUPS } from './constants/color-groups';
 import { Link } from 'react-router-dom';
-import { randomizer } from '../../utils/utils';
-import { colors } from '../../data/colors';
 
-const Sidebar = props => {
-  let initialResult = randomizer(colors);
-  const [randomColor, setRandomColor] = useState(initialResult);
-  const getRandom = () => {
-    let result = randomizer(colors);
-    setRandomColor(result);
-    // console.log('RANDOM COLOR IS:', result);
-  };
-
+const Sidebar = ({ getRandom, randomColor }) => {
   const colorGroups = COLOR_GROUPS.map(color => (
     <li key={color} className="sidebar-option">
       <a href="#">{color}</a>
