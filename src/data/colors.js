@@ -119,9 +119,4 @@ exports.colors = [
   { code: '#5b0435' },
   { code: '#8758bd' },
   { code: '#7421ba' },
-  { code: '#b1bac0' },
-  { code: '#ef88da' },
-  { code: '#852ef4' },
-  { code: '#ebb263' },
-  { code: '#99c722' },
 ];

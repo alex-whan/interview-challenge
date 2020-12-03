@@ -1,7 +1,7 @@
 .App {
   text-align: center;
-  background-color: #282c34;
-  color: white;
+  background-color: #ffffff;
+  color: #363c3d;
   font-family: 'Source Serif Pro', serif;
   border: red 2px solid;
 }
@@ -12,6 +12,7 @@
 }
 
 header {
+  background-color: #363c3d;
   display: flex;
   width: 100%;
   align-items: center;
@@ -33,9 +34,9 @@ footer {
   height: 75px;
   align-items: bottom;
   margin: 2%;
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   border-radius: 5px;
-  box-shadow: 0px 1px 7px #888888;
+  box-shadow: 0px 1px 7px #363c3d;
   list-style-type: none;
   display: inline-block;
   vertical-align: bottom;
@@ -43,7 +44,8 @@ footer {
 
 .color-swatch h4 {
   align-self: baseline;
-  background-color: grey;
+  background-color: #ffffff;
+  color: #363c3d;
   position: relative;
   vertical-align: bottom;
 }
@@ -61,7 +63,7 @@ footer {
 
 .pagination a {
   border: red 2px solid;
-  color: white;
+  color: #363c3d;
 }
 
 .pagination a:hover {
@@ -81,7 +83,7 @@ footer {
   list-style-type: none;
   /* display: inline-block; */
   text-align: left;
-  background-color: grey;
+  background-color: #d6d8d8;
   max-width: 10%;
   border: red 2px solid;
   height: 100%;
