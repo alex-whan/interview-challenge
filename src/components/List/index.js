@@ -36,14 +36,16 @@ const List = () => {
           style={{ backgroundColor: code }}
           onClick={() => showColor(color)}
         >
-          <h4>{color.code}</h4>
+          <div>
+            <h4>{color.code}</h4>
+          </div>
         </li>
       </Link>
     );
   });
 
   return (
-    <>
+    <div>
       <ul className="color-list">{colorList}</ul>
 
       <Pagination
@@ -51,7 +53,7 @@ const List = () => {
         totalEntries={colors.length}
         paginate={paginate}
       />
-    </>
+    </div>
   );
 };
 

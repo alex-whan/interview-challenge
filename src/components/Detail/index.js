@@ -8,10 +8,15 @@ const Detail = () => {
 
   return (
     <>
-      <h2 style={{ color: 'white', backgroundColor: hex }}>
-        Detail view for {hex}
-      </h2>
-      <Link to={'/'}>Clear</Link>
+      <div className="detail" style={{ backgroundColor: hex }}>
+        <div className="detail-color"></div>
+        <div className="detail-hex">
+          <h2>{hex}</h2>
+        </div>
+      </div>
+      <Link to={'/'}>
+        <button>Clear</button>
+      </Link>
     </>
   );
 };
