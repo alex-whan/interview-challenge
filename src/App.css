@@ -30,8 +30,10 @@ header {
 
 .logo-div > img {
   background-color: #363c3d;
-  min-width: 25px;
-  min-height: 25px;
+  min-width: 20px;
+  max-width: 50px;
+  min-height: 20px;
+  max-height: 50px;
   margin: 0 auto;
 }
 
@@ -66,6 +68,10 @@ header {
 .sidebar > .button {
   min-height: 10%;
   margin-left: 5%;
+}
+
+.sidebar-nav > ul > li {
+  margin: 8%;
 }
 
 .sidebar-nav > ul > li > a:hover {
@@ -105,7 +111,7 @@ header {
   min-width: 200px;
   min-height: 80vh;
   margin: 5% auto;
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   justify-content: space-around;
   row-gap: 5%;
 
@@ -122,17 +128,13 @@ header {
   grid-row: 1/ 9; */
 }
 
-/* .color-list > a {
-  text-align: left;
-  align-items: end;
-} */
-
 a > .color-card {
   align-items: center;
 }
 
 a:link {
   text-decoration: none;
+  margin: 2%;
 }
 
 .color-card {
@@ -170,15 +172,21 @@ a:link {
   justify-content: center;
   margin: 0 auto;
   border: 2px 2px solid #363c3d;
+  width: 80vw;
+  height: 80vh;
+}
+
+.detail .color-block {
+  border-radius: 0.5rem 0.5rem 0 0;
 }
 
 .detail > a > .color-card {
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.434);
   border: 2px solid #363c3d;
-  border-radius: 0.5rem;
-  height: 60vh;
+  border-radius: 0.65rem;
+  height: 50vh;
   width: 70vw;
-  padding: 5px;
+  /* padding: 5px; */
   margin: 5%;
 }
 
@@ -190,6 +198,11 @@ a:link {
 }
 
 .home-button {
+  height: 10%;
+  position: relative;
+}
+
+.home-button > button {
   height: 10%;
   position: relative;
 }
