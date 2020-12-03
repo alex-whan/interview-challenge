@@ -21,7 +21,7 @@ const List = () => {
   /////////////////
 
   const showColor = hex => {
-    console.log(`You clicked: ${hex.code} (${hex.name})`);
+    console.log(`You clicked: ${hex.code}`);
   };
 
   const colorList = currentEntries.map(color => {
