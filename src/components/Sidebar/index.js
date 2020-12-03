@@ -15,19 +15,19 @@ const Sidebar = props => {
     console.log('RANDOM COLOR IS:', result);
   };
 
+  const colorGroups = COLOR_GROUPS.map(color => (
+    <li key={color}>
+      <a>{color}</a>
+    </li>
+  ));
+
   return (
     <>
       <div className="sidebar" style={{ height: viewHeight / 4 }}>
         <Link to={`/color/${randomColor.code.slice(1)}`}>
           <button onClick={getRandom}>Random Color</button>
         </Link>
-        <ul>
-          {COLOR_GROUPS.map(color => (
-            <li key={color}>
-              <a>{color}</a>
-            </li>
-          ))}
-        </ul>
+        <ul>{colorGroups}</ul>
       </div>
     </>
   );
