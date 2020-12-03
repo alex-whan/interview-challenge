@@ -8,14 +8,14 @@ const Pagination = ({ entriesPerPage, totalEntries, paginate }) => {
 
   return (
     <>
-      <div className="center">
-        <ul className="pagination">
+      <div className="pagination">
+        <ul>
           {pageNumbers.map(number => {
             return (
               <a
                 key={number}
                 onClick={() => paginate(number)}
-                href="#0"
+                href="#"
                 className="page-link"
               >
                 <li className="page-item">{number}</li>
