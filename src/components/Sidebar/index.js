@@ -16,8 +16,8 @@ const Sidebar = props => {
   };
 
   const colorGroups = COLOR_GROUPS.map(color => (
-    <li key={color}>
-      <a>{color}</a>
+    <li key={color} className="sidebar-option">
+      <a href="#">{color}</a>
     </li>
   ));
 
