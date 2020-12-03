@@ -11,11 +11,11 @@ const Detail = () => {
     <>
       <div className="detail">
         <Card code={hex} normalizedCode={hexId} />
-      </div>
-      <div className="home-button">
-        <Link to={'/'}>
-          <button>Clear</button>
-        </Link>
+        <div className="home-button">
+          <Link to={'/'}>
+            <button>Clear</button>
+          </Link>
+        </div>
       </div>
     </>
   );
