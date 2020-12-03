@@ -1,13 +1,15 @@
 import React from 'react';
 import { COLOR_GROUPS } from './constants/color-groups';
 import { Link } from 'react-router-dom';
+import randomizer from '../../utils/utils';
 
 const Sidebar = () => {
   const viewHeight = window.outerHeight;
   // style={{ height: viewHeight }}
+
   return (
     <>
-      <div className="sidebar" style={{ height: viewHeight / 3 }}>
+      <div className="sidebar" style={{ height: viewHeight / 4 }}>
         <Link to={'/'}>
           <button>Random Color</button>
         </Link>
