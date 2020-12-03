@@ -84,7 +84,7 @@ exports.colors = [
   { code: '#32bbfb' },
   { code: '#9f334e' },
   { code: '#438f66' },
-  { code: '#438f66' },
+  { code: '#7092e3' },
   { code: '#505f28' },
   { code: '#d71380' },
   { code: '#486f00' },
