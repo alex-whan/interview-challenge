@@ -5,11 +5,14 @@ const Header = () => {
   return (
     <>
       <header>
-        <img src={logo} alt="Helpful Human Logo" />
-        <h1>Header</h1>
-        <form>
-          <input type="text" placeholder="Search"></input>
-        </form>
+        <div className="logo-div">
+          <img src={logo} alt="Helpful Human Logo" />
+        </div>
+        <div className="search-form">
+          <form>
+            <input type="text" placeholder="Search"></input>
+          </form>
+        </div>
       </header>
     </>
   );

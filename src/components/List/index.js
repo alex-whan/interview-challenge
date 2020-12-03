@@ -45,14 +45,17 @@ const List = () => {
   });
 
   return (
-    <div>
-      <ul className="color-list">{colorList}</ul>
-
-      <Pagination
-        entriesPerPage={entriesPerPage}
-        totalEntries={colors.length}
-        paginate={paginate}
-      />
+    <div className="color-swatch-section">
+      <div className="color-list">
+        <ul>{colorList}</ul>
+      </div>
+      <div className="pagination">
+        <Pagination
+          entriesPerPage={entriesPerPage}
+          totalEntries={colors.length}
+          paginate={paginate}
+        />
+      </div>
     </div>
   );
 };
