@@ -4,7 +4,6 @@ import Sidebar from './components/Sidebar';
 import List from './components/List';
 import Detail from './components/Detail';
 import { Route, Switch } from 'react-router-dom';
-// import Footer from './components/Footer';
 
 const App = () => {
   return (
