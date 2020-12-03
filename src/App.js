@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import List from './components/List';
-import Footer from './components/Footer';
+// import Footer from './components/Footer';
 import Detail from './components/Detail';
 import { Route, Switch } from 'react-router-dom';
 
@@ -19,7 +19,6 @@ const App = () => {
           <List />
         </Route>
       </Switch>
-      <Footer />
     </div>
   );
 };
