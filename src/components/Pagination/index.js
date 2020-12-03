@@ -15,7 +15,7 @@ const Pagination = ({ entriesPerPage, totalEntries, paginate }) => {
               <a
                 key={number}
                 onClick={() => paginate(number)}
-                href="#0"
+                href="#"
                 className="page-link"
               >
                 <li className="page-item">{number}</li>
