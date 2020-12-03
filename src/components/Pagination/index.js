@@ -8,8 +8,8 @@ const Pagination = ({ entriesPerPage, totalEntries, paginate }) => {
 
   return (
     <>
-      <div className="center">
-        <ul className="pagination">
+      <div className="pagination">
+        <ul>
           {pageNumbers.map(number => {
             return (
               <a

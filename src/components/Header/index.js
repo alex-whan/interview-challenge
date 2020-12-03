@@ -4,7 +4,7 @@ import logo from '../../assets/logo-symbol.svg';
 const Header = () => {
   return (
     <>
-      <header>
+      <header className="header">
         <div className="logo-div">
           <img src={logo} alt="Helpful Human Logo" />
         </div>

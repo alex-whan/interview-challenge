@@ -11,7 +11,7 @@ const App = () => {
     <>
       <div className="App">
         <Header />
-        <div className="grid-container">
+        <main className="grid-container">
           <Sidebar />
           <Switch>
             <Route exact path="/color/:hexId">
@@ -21,7 +21,7 @@ const App = () => {
               <List />
             </Route>
           </Switch>
-        </div>
+        </main>
       </div>
     </>
   );

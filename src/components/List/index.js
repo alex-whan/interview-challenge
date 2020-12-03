@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Pagination from '../Pagination';
+import Card from '../Card';
 import { colors } from '../../data/colors.js';
-import { Link } from 'react-router-dom';
 
 const List = () => {
   /////////////////
@@ -20,42 +20,24 @@ const List = () => {
   // Each list item also needs a link to its own color detail view
   /////////////////
 
-  const showColor = hex => {
-    console.log(`You clicked: ${hex.code}`);
-  };
+  // const showColor = hex => {
+  //   console.log(`You clicked: ${hex.code}`);
+  // };
 
   const colorList = currentEntries.map(color => {
     let code = color.code;
     let normalizedCode = color.code.slice(1);
-    // console.log('COLOR CODE?', color.code);
-    // console.log('SHORT CODE', color.code.slice(1));
-    return (
-      <Link key={color.code} to={`/color/${normalizedCode}`}>
-        <li
-          className="color-swatch"
-          style={{ backgroundColor: code }}
-          onClick={() => showColor(color)}
-        >
-          <div>
-            <h4>{color.code}</h4>
-          </div>
-        </li>
-      </Link>
-    );
+    return <Card key={code} code={code} normalizedCode={normalizedCode} />;
   });
 
   return (
     <div className="color-swatch-section">
-      <div className="color-list">
-        <ul>{colorList}</ul>
-      </div>
-      <div className="pagination">
-        <Pagination
-          entriesPerPage={entriesPerPage}
-          totalEntries={colors.length}
-          paginate={paginate}
-        />
-      </div>
+      <div className="color-list">{colorList}</div>
+      <Pagination
+        entriesPerPage={entriesPerPage}
+        totalEntries={colors.length}
+        paginate={paginate}
+      />
     </div>
   );
 };
