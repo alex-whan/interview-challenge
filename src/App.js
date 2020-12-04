@@ -13,14 +13,13 @@ const App = () => {
   const [allColors, setAllColors] = useState(colors);
   const [nextRandomColor, setNextRandomColor] = useState(randomizer(colors));
   const [isLoading, setIsLoading] = useState(false);
+  const [formVal, setFormVal] = useState('');
 
-  console.log('next random?', nextRandomColor);
+  console.log('form??', formVal);
 
   const getRandom = async () => {
-    // let result = randomizer(allColors);
     let result = await getColors();
     let randomized = randomizer(result);
-    // console.log('RANDOM?', randomized);
     setNextRandomColor(randomized);
   };
 
@@ -43,6 +42,11 @@ const App = () => {
     setAllColors(hues);
   };
 
+  const formHandler = value => {
+    console.log('FROM FORM:', value);
+    setFormVal(value);
+  };
+
   // Script to generate random colors on page load
   // Offline color data array renders as backup
   useEffect(async () => {
@@ -55,7 +59,7 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <Header />
+        <Header formHandler={formHandler} />
         <main className="grid-container">
           <Sidebar
             filterColor={filterColor}
