@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import List from './components/List';
 import Detail from './components/Detail';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import { randomizer } from './utils/utils';
 import { colors } from './data/colors';
 import randomColor from 'randomcolor';
@@ -13,9 +13,6 @@ const App = () => {
   const [allColors, setAllColors] = useState(colors);
   const [nextRandomColor, setNextRandomColor] = useState(randomizer(colors));
   const [isLoading, setIsLoading] = useState(false);
-  const [formVal, setFormVal] = useState('');
-
-  console.log('form??', formVal);
 
   const getRandom = async () => {
     let result = await getColors();
@@ -43,8 +40,17 @@ const App = () => {
   };
 
   const formHandler = value => {
-    console.log('FROM FORM:', value);
-    setFormVal(value);
+    value[0] !== '#' ? (value = `#${value}`) : value;
+    const filtered = allColors.filter(
+      color => value.toLowerCase() === color.code
+    );
+
+    // Cannot currently "force" a redirect when finding the correct hex code
+    return filtered.length ? (
+      <Redirect to={`/color/${filtered[0].code}`} />
+    ) : (
+      alert('No results found.')
+    );
   };
 
   // Script to generate random colors on page load
@@ -72,7 +78,7 @@ const App = () => {
             </Route>
             <Route path="/">
               {isLoading ? (
-                <h2>'Loading.... please wait'</h2>
+                <h2>Loading.... please wait</h2>
               ) : (
                 <List colors={allColors} />
               )}
