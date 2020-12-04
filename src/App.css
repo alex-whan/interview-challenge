@@ -228,3 +228,43 @@ a:link {
   background-color: lightgray;
   text-decoration: underline;
 }
+
+@media only screen and (min-width: 1150px) {
+  .color-list {
+    margin-top: 1%;
+  }
+  .color-card {
+    width: 15vw;
+  }
+  .color-title > h4 {
+    margin: 0.5%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .button > a > button {
+    padding: 5px;
+    font-size: 0.75em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .header {
+    width: 100%;
+  }
+
+  .grid-container {
+    grid-template-columns: 100px;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .search-form {
+    margin-right: 15%;
+  }
+
+  .detail {
+    margin-left: 90%;
+    height: 100vh;
+    min-width: 10%;
+  }
+}
