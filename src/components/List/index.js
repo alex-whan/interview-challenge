@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
 import Pagination from '../Pagination';
 import Card from '../Card';
-import { colors } from '../../data/colors.js';
 
-const List = () => {
-  // Pagination states
+const List = ({ colors }) => {
+  // Component-level pagination states
   const [currentPage, setCurrentPage] = useState(1);
   const [entriesPerPage] = useState(12);
 
-  // Gets current page array
+  // Determines current page from array
   const indexOfLastPage = currentPage * entriesPerPage;
   const indexOfFirstPage = indexOfLastPage - entriesPerPage;
   const currentEntries = colors.slice(indexOfFirstPage, indexOfLastPage);
 
-  // Changes page
+  // Changes page on-click
   const paginate = pageNumber => setCurrentPage(pageNumber);
 
   const colorList = currentEntries.map(color => {

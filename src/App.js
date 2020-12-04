@@ -9,12 +9,11 @@ import { randomizer } from './utils/utils';
 import { colors } from './data/colors';
 
 const App = () => {
-  let initialResult = randomizer(colors);
-
-  const [randomColor, setRandomColor] = useState(initialResult);
+  const [allColors, setAllColors] = useState(colors);
+  const [randomColor, setRandomColor] = useState(randomizer(colors));
 
   const getRandom = () => {
-    let result = randomizer(colors);
+    let result = randomizer(allColors);
     setRandomColor(result);
   };
 
@@ -29,7 +28,7 @@ const App = () => {
               <Detail />
             </Route>
             <Route path="/">
-              <List />
+              <List colors={allColors} />
             </Route>
           </Switch>
         </main>
