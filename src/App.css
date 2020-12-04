@@ -136,12 +136,6 @@ a:link {
   width: 150px;
 }
 
-@media only screen and (min-width: 1100px) {
-  .color-card {
-    min-width: 15vh;
-  }
-}
-
 .color-block {
   height: 80%;
   width: 100%;
@@ -150,7 +144,7 @@ a:link {
 }
 
 .color-title > h4 {
-  border: 6px solid white;
+  border: 5px solid white;
   height: 20%;
   width: 80%;
   background-color: white;
@@ -183,6 +177,8 @@ a:link {
   height: 50vh;
   width: 70vw;
   margin: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
 }
 
 .detail .color-card > .color-title > h4 {
@@ -190,6 +186,34 @@ a:link {
   margin: 2%;
   max-width: 20%;
   position: relative;
+}
+
+.related-colors {
+  display: flex;
+  max-width: 80vw;
+  padding: 0;
+  padding-left: 2%;
+  padding-right: 2%;
+  justify-content: space-around;
+}
+
+.related-colors .color-card {
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.434);
+  border: 2px 1px solid white;
+  display: flex wrap;
+  width: 12vw;
+  height: 10vh;
+  padding: 0;
+}
+
+.related-colors > a > .color-card > .color-title {
+  height: 40%;
+}
+
+.related-colors > a > .color-card > .color-title > h4 {
+  font-size: 0.75em;
+  margin: 1%;
+  border: 2px solid white;
 }
 
 .home-button {
@@ -204,6 +228,7 @@ a:link {
   font-size: 1.1em;
   font-weight: bold;
   width: 30%;
+  margin-top: 2%;
   margin-bottom: 10%;
   border-radius: 0.5rem;
   background-color: white;
@@ -236,8 +261,15 @@ a:link {
   .color-card {
     width: 15vw;
   }
+
   .color-title > h4 {
     margin: 0.5%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .color-card {
+    min-width: 15vh;
   }
 }
 
