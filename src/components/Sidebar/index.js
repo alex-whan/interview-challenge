@@ -1,4 +1,5 @@
 import React from 'react';
+import './Sidebar.css';
 import { COLOR_GROUPS } from './constants/color-groups';
 import { Link } from 'react-router-dom';
 
