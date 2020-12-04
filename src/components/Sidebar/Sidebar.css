@@ -1,0 +1,44 @@
+.sidebar {
+  grid-column: span 1;
+  grid-row: 1 / 11;
+  background-color: lightgrey;
+  min-height: 100vh;
+  text-transform: capitalize;
+  min-width: 20%;
+}
+
+.sidebar > .button {
+  min-height: 10%;
+  margin-left: 5%;
+}
+
+.sidebar-nav > ul > li {
+  margin: 8%;
+}
+
+.sidebar-nav > ul > li > a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sidebar-nav > ul > li > a:active {
+  text-decoration: underline;
+  background-color: darkgray;
+}
+
+.sidebar-nav {
+  margin-left: 5%;
+  font-size: 1.25em;
+}
+
+.button > a > button {
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+  width: 90%;
+  margin: auto;
+  margin-top: 20%;
+  margin-bottom: 10%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

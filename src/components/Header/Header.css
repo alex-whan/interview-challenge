@@ -1,0 +1,41 @@
+header {
+  background-color: #363c3d;
+  display: flex;
+  justify-content: space-between;
+  min-width: 275px;
+}
+
+.logo-div {
+  background-color: #363c3d;
+  height: 2%;
+  width: 3%;
+  margin: 1%;
+}
+
+.logo-div > img {
+  background-color: #363c3d;
+  min-width: 20px;
+  max-width: 50px;
+  min-height: 20px;
+  max-height: 50px;
+  margin: 0 auto;
+}
+
+.search-form {
+  min-width: 15%;
+  text-align: center;
+  margin: 0;
+  margin-right: 5%;
+}
+
+.search-form > form {
+  position: relative;
+}
+
+.search-form > form > input {
+  padding: 0.65rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 1em;
+  margin: 5%;
+}

@@ -14,93 +14,9 @@
   height: 100vh;
 }
 
-header {
-  background-color: #363c3d;
-  display: flex;
-  justify-content: space-between;
-  min-width: 275px;
-}
+/**** Styling for List, Pagination, Card, and Detail components ****/
 
-.logo-div {
-  background-color: #363c3d;
-  height: 2%;
-  width: 3%;
-  margin: 1%;
-}
-
-.logo-div > img {
-  background-color: #363c3d;
-  min-width: 20px;
-  max-width: 50px;
-  min-height: 20px;
-  max-height: 50px;
-  margin: 0 auto;
-}
-
-.search-form {
-  min-width: 15%;
-  text-align: center;
-  margin: 0;
-  margin-right: 5%;
-}
-
-.search-form > form {
-  position: relative;
-}
-
-.search-form > form > input {
-  padding: 0.65rem;
-  width: 100%;
-  border-radius: 0.5rem;
-  font-size: 1em;
-  margin: 5%;
-}
-
-.sidebar {
-  grid-column: span 1;
-  grid-row: 1 / 11;
-  background-color: lightgrey;
-  min-height: 100vh;
-  text-transform: capitalize;
-  min-width: 20%;
-}
-
-.sidebar > .button {
-  min-height: 10%;
-  margin-left: 5%;
-}
-
-.sidebar-nav > ul > li {
-  margin: 8%;
-}
-
-.sidebar-nav > ul > li > a:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.sidebar-nav > ul > li > a:active {
-  text-decoration: underline;
-  background-color: darkgray;
-}
-
-.sidebar-nav {
-  margin-left: 5%;
-  font-size: 1.25em;
-}
-
-.button > a > button {
-  padding: 10px;
-  font-size: 1.1em;
-  font-weight: bold;
-  width: 90%;
-  margin: auto;
-  margin-top: 20%;
-  margin-bottom: 10%;
-  border-radius: 0.5rem;
-  cursor: pointer;
-}
-
+/** List **/
 .color-swatch-section {
   grid-column: 2 / 6;
   grid-row: 1/ 9;
@@ -118,6 +34,7 @@ header {
   row-gap: 5%;
 }
 
+/** Card **/
 a > .color-card {
   align-items: center;
 }
@@ -157,6 +74,7 @@ a:link {
   text-align: left;
 }
 
+/** Detail **/
 .detail {
   align-items: center;
   justify-content: center;
@@ -234,6 +152,7 @@ a:link {
   cursor: pointer;
 }
 
+/** Pagination **/
 .pagination {
   align-items: center;
   grid-column: 1 / 6;
@@ -253,6 +172,7 @@ a:link {
   text-decoration: underline;
 }
 
+/** Media Queries **/
 @media only screen and (min-width: 1150px) {
   .color-list {
     margin-top: 1%;

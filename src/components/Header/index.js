@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Header.css';
 import logo from '../../assets/logo-symbol.svg';
 
 const Header = ({ formHandler }) => {
