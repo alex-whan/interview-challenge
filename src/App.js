@@ -46,11 +46,9 @@ const App = () => {
     );
 
     // Cannot currently "force" a redirect when finding the correct hex code
-    return filtered.length ? (
-      <Redirect to={`/color/${filtered[0].code}`} />
-    ) : (
-      alert('No results found.')
-    );
+    return filtered.length
+      ? alert(`Success! Hex code ${filtered[0].code} present in set.`)
+      : alert('No results found.');
   };
 
   // Script to generate random colors on page load
