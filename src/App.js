@@ -14,9 +14,14 @@ const App = () => {
   const [nextRandomColor, setNextRandomColor] = useState(randomizer(colors));
   const [isLoading, setIsLoading] = useState(false);
 
-  const getRandom = () => {
-    let result = randomizer(allColors);
-    setNextRandomColor(result);
+  console.log('next random?', nextRandomColor);
+
+  const getRandom = async () => {
+    // let result = randomizer(allColors);
+    let result = await getColors();
+    let randomized = randomizer(result);
+    // console.log('RANDOM?', randomized);
+    setNextRandomColor(randomized);
   };
 
   const getColors = async () => {

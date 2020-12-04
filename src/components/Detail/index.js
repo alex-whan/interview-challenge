@@ -6,12 +6,25 @@ import randomColor from 'randomcolor';
 const Detail = () => {
   const { hexId } = useParams();
   const hex = `#${hexId}`;
-  const relatedColors = randomColor({ count: 5, hue: hex });
+  const backupHexes = ['#11386b', '#5c6fbc', '#95b8f9', '#646fe5', '#439fc6'];
+
+  // This try/catch block will inject a backup array when hitting an occasional error with fetching a random hex to prevent crashing.
+  const tryRelated = () => {
+    try {
+      return randomColor({ count: 5, hue: hex });
+    } catch (e) {
+      console.log(e);
+      console.error(
+        'There was an error fetching the color hex. The backup hex array will be used instead.'
+      );
+      return backupHexes;
+    }
+  };
+  const relatedColors = tryRelated();
+
   const relatedColorCards = relatedColors.map(color => (
     <Card key={color} code={color} normalizedCode={color.slice(1)} />
   ));
-
-  console.log('realted colors', relatedColorCards);
 
   return (
     <>
