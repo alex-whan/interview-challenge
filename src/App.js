@@ -62,7 +62,7 @@ const App = () => {
             </Route>
             <Route path="/">
               {isLoading ? (
-                'Loading.... please wait'
+                <h2>'Loading.... please wait'</h2>
               ) : (
                 <List colors={allColors} />
               )}
