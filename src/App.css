@@ -133,7 +133,13 @@ a:link {
   align-items: end;
   border-radius: 0.5rem;
   height: 175px;
-  min-width: 150px;
+  width: 150px;
+}
+
+@media only screen and (min-width: 1100px) {
+  .color-card {
+    min-width: 15vh;
+  }
 }
 
 .color-block {
