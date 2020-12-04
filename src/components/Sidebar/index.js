@@ -2,9 +2,13 @@ import React from 'react';
 import { COLOR_GROUPS } from './constants/color-groups';
 import { Link } from 'react-router-dom';
 
-const Sidebar = ({ getRandom, nextRandomColor }) => {
+const Sidebar = ({ getRandom, nextRandomColor, filterColor }) => {
   const colorGroups = COLOR_GROUPS.map(color => (
-    <li key={color} className="sidebar-option">
+    <li
+      key={color}
+      className="sidebar-option"
+      onClick={() => filterColor(color)}
+    >
       <a href="#">{color}</a>
     </li>
   ));

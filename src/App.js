@@ -27,6 +27,16 @@ const App = () => {
     return randomColors;
   };
 
+  const filterColor = async color => {
+    color === 'gray' ? (color = 'monochrome') : color;
+    color === 'brown' ? (color = '#964b00') : color;
+    const choice = await randomColor({ count: 120, hue: `${color}` });
+    const hues = choice.map(color => {
+      return { code: color };
+    });
+    setAllColors(hues);
+  };
+
   // Script to generate random colors on page load
   // Offline color data array renders as backup
   useEffect(async () => {
@@ -41,7 +51,11 @@ const App = () => {
       <div className="App">
         <Header />
         <main className="grid-container">
-          <Sidebar getRandom={getRandom} nextRandomColor={nextRandomColor} />
+          <Sidebar
+            filterColor={filterColor}
+            getRandom={getRandom}
+            nextRandomColor={nextRandomColor}
+          />
           <Switch>
             <Route exact path="/color/:hexId">
               <Detail />
