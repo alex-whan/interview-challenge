@@ -31,6 +31,10 @@
   font-size: 1.25em;
 }
 
+.sidebar-option:hover {
+  background-color: darkgrey;
+}
+
 .button > a > button {
   padding: 10px;
   font-size: 1.1em;
@@ -41,4 +45,13 @@
   margin-bottom: 10%;
   border-radius: 0.5rem;
   cursor: pointer;
+}
+
+.button > a > button:hover {
+  background-color: darkgray;
+}
+
+.button > a > button:active {
+  background-color: darkgray;
+  transform: translateY(2px);
 }
