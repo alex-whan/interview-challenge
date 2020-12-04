@@ -27,9 +27,10 @@ const App = () => {
     return randomColors;
   };
 
+  // Can accept either a hue name or hex code string
   const filterColor = async color => {
-    color === 'gray' ? (color = 'monochrome') : color;
-    color === 'brown' ? (color = '#964b00') : color;
+    color === 'gray' ? (color = 'monochrome') : color; // gray hues
+    color === 'brown' ? (color = '#964b00') : color; // brown hues
     const choice = await randomColor({ count: 120, hue: `${color}` });
     const hues = choice.map(color => {
       return { code: color };
