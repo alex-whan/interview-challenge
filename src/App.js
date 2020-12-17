@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import List from './components/List';
 import Detail from './components/Detail';
+import Loading from './components/Loading';
 import { Route, Switch } from 'react-router-dom';
 import { randomizer } from './utils/utils';
 import { colors as offlineColors } from './data/colors';
@@ -22,23 +23,12 @@ const App = () => {
     setNextRandomColor(randomized);
   };
 
-  // Using randomColors on front end only
-  // const getColors = async () => {
-  //   const randoms = await randomColor({ count: 120 });
-  //   const randomColors = randoms.map(color => {
-  //     return { code: color };
-  //   });
-  //   return randomColors;
-  // };
-
   // Calls the API endpoint to populate "base" color dataset from database
   const getColors = async () => {
     const url = process.env.REACT_APP_API_URL;
-    // const url = 'http://localhost:3001/colors';
     const res = await fetch(url);
     const colors = await res.json();
     return colors;
-    // console.log('COLORS ON FRONT END??', colors);
   };
 
   // Can accept either a hue name or hex code string - utilizes randomcolor utility
@@ -88,11 +78,7 @@ const App = () => {
               <Detail />
             </Route>
             <Route path="/">
-              {isLoading ? (
-                <h2>Loading.... please wait</h2>
-              ) : (
-                <List colors={allColors} />
-              )}
+              {isLoading ? <Loading /> : <List colors={allColors} />}
             </Route>
           </Switch>
         </main>
