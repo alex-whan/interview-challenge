@@ -9,6 +9,7 @@ import { randomizer } from './utils/utils';
 import { colors as offlineColors } from './data/colors';
 import randomColor from 'randomcolor';
 import dotenv from 'dotenv';
+const { REACT_APP_API_URL } = process.env;
 
 const App = () => {
   const [allColors, setAllColors] = useState(offlineColors);
@@ -34,7 +35,8 @@ const App = () => {
 
   // Calls the API endpoint to populate "base" color dataset from database
   const getColors = async () => {
-    const url = 'http://localhost:3001/colors';
+    const url = REACT_APP_API_URL;
+    // const url = 'http://localhost:3001/colors';
     const res = await fetch(url);
     const colors = await res.json();
     return colors;
