@@ -35,10 +35,10 @@ const App = () => {
     const res = await fetch(url);
     const colors = await res.json();
     console.log('COLORS ON FRONT END??', colors);
-    // const randomColors = randoms.map(color => {
+    // const randomColors = colors.map(color => {
     //   return { code: color };
     // });
-    // return randomColors;
+    return colors;
   };
 
   // Can accept either a hue name or hex code string
