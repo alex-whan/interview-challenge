@@ -19,6 +19,7 @@ app.use(router);
 app.use('*', error404);
 app.use(error500);
 
+// This will not start on its own as this is exported with a start() method - could just have it start automatically
 module.exports = {
   server: app,
   start: port => {

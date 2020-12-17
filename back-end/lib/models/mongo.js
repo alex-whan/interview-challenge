@@ -21,15 +21,15 @@ class Model {
     return newRecord.save();
   }
 
-  // update() performs a findOneByIdAndUpdate() operation in your schema for an existing record
-  update(_id, record) {
-    return this.schema.findByIdAndUpdate(_id, record, { new: true });
-  }
+  // // update() performs a findOneByIdAndUpdate() operation in your schema for an existing record
+  // update(_id, record) {
+  //   return this.schema.findByIdAndUpdate(_id, record, { new: true });
+  // }
 
-  // delete() performs a findOneByIdAndDelete() in your schema for a new record
-  delete(_id) {
-    return this.schema.findByIdAndDelete(_id);
-  }
+  // // delete() performs a findOneByIdAndDelete() in your schema for a new record
+  // delete(_id) {
+  //   return this.schema.findByIdAndDelete(_id);
+  // }
 }
 
 // Exports a class with CRUD methods, coded to work with your schema

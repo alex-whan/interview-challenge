@@ -20,6 +20,7 @@ const App = () => {
     setNextRandomColor(randomized);
   };
 
+  // can just have this call the API endpoint instead
   const getColors = async () => {
     const randoms = await randomColor({ count: 120 });
     const randomColors = randoms.map(color => {
