@@ -29,16 +29,16 @@ const App = () => {
   //   return randomColors;
   // };
 
-  // can just have this call the API endpoint instead
+  // Calls the API endpoint to populate "base" color dataset from database
   const getColors = async () => {
     const url = 'http://localhost:3001/colors';
     const res = await fetch(url);
     const colors = await res.json();
-    console.log('COLORS ON FRONT END??', colors);
+    // console.log('COLORS ON FRONT END??', colors);
     return colors;
   };
 
-  // Can accept either a hue name or hex code string
+  // Can accept either a hue name or hex code string - utilizes randomcolor utility
   const filterColor = async color => {
     color === 'gray' ? (color = 'monochrome') : color; // gray hues
     color === 'brown' ? (color = '#964b00') : color; // brown hues
@@ -61,8 +61,8 @@ const App = () => {
       : alert('No results found.');
   };
 
-  // Script to generate random colors on page load
-  // Offline color data array renders as backup
+  // Fetches stored colors from database on page load
+  // Offline color data array renders as backup if database connection fails for any reason
   useEffect(async () => {
     setIsLoading(true);
     const newColors = await getColors();

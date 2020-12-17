@@ -12,10 +12,10 @@ const mongooseOptions = {
   useUnifiedTopology: true,
 };
 
-// mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
-mongoose.connect('mongodb://localhost:27017/colors', mongooseOptions);
+mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
+// mongoose.connect('mongodb://localhost:27017/colors', mongooseOptions);
 
-// Script for adding colors to MongoDB:
+// Script will add colors from offline dataset to MongoDB on server startup
 // Need to make sure they don't get saved more than once - check for dupes
 colorData.colors.map(async color => {
   try {
