@@ -19,8 +19,8 @@ mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
 // Need to make sure they don't get saved more than once - check for dupes
 colorData.colors.map(async color => {
   try {
-    let newColor = await ColorModel.create(color);
-    console.log('COLOR:', newColor);
+    await ColorModel.create(color);
+    // console.log('COLOR:', newColor);
   } catch (e) {
     console.log('ERROR', e);
   }
