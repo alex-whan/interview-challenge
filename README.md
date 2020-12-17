@@ -7,6 +7,7 @@
 - Create a `.env` file in the root directory for the back end - titled `back-end` - by running `touch .env`.
 - Use the provided `.env.example` file to fill out the `.env` as shown.
 - In the `back-end` directory, start the server by running `node index.js` as the entry point to the back end. This command will also trigger the `script` in `index.js` that will populate the connected database via MongoDB with the offline color data.
+  - Note: Do this step before firing up the front end in order to have the application pull from the database rather than the offline backup dataset.
 - At this point, you may either interact with the front end via the deployed webpage [here](https://alex-whan-interview-challenge.netlify.app/) or by navigating to the root directory of the application and using the `npm start` command to run the front end locally.
 
 ## Challenge
