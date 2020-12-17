@@ -1,16 +1,16 @@
 'use strict';
 
+require('dotenv').config();
 const express = require('express');
 const app = express();
 const cors = require('cors');
-app.use(cors());
-require('dotenv').config();
 const router = require('../lib/routes/api');
 const error404 = require('./middleware/404');
 const error500 = require('./middleware/500');
 
 // GLOBAL MIDDLEWARE
 app.use(express.json());
+app.use(cors());
 app.use(router);
 
 // ERRORS
