@@ -24,7 +24,7 @@ const App = () => {
   };
 
   // Calls the API endpoint to populate "base" color dataset from database
-  // If no response from endpoint, colors are populated by offline dataset
+  // If no response from endpoint, colors are populated by local dataset
   const getColors = async () => {
     try {
       const url = `http://localhost:3001/colors`;

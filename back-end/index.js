@@ -13,7 +13,6 @@ const mongooseOptions = {
 };
 
 mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
-// mongoose.connect('mongodb://localhost:27017/colors', mongooseOptions);
 
 // COLOR SCRIPT
 // Script will add colors from offline dataset to MongoDB on server startup
