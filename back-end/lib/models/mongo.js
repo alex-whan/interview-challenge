@@ -21,16 +21,6 @@ class Model {
     let newRecord = new this.schema(record);
     return newRecord.save();
   }
-
-  // // update() performs a findOneByIdAndUpdate() operation in your schema for an existing record
-  // update(_id, record) {
-  //   return this.schema.findByIdAndUpdate(_id, record, { new: true });
-  // }
-
-  // // delete() performs a findOneByIdAndDelete() in your schema for a new record
-  // delete(_id) {
-  //   return this.schema.findByIdAndDelete(_id);
-  // }
 }
 
 module.exports = Model;
