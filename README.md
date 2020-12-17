@@ -2,8 +2,14 @@
 
 ## Instructions for App Startup
 
-- Run `npm i`
-- The front end can be run independently
+- Run `npm i` to install all required dependencies for back end functionality.
+- The front end can be run independently of the back end. If no server is running locally, the front end will pull offline color data from the local dataset.
+- Create a `.env` file in the root directory for the back end - titled `back-end` - by running `touch .env`.
+- Use the provided `.env.example` file to fill out the `.env` as shown.
+- In the `back-end` directory, start the server by running `node index.js` as the entry point to the back end. This command will also trigger the `script` in `index.js` that will populate the connected database via MongoDB with the offline color data.
+- At this point, you may either interact with the front end via the deployed webpage [here](https://alex-whan-interview-challenge.netlify.app/) or by navigating to the root directory of the application and using the `npm start` command to run the front end locally.
+
+## Challenge
 
 Welcome to Helpful Human's at home proficiency challenge! This challenge gauges your knowledge on a few different metrics that we use, in part, to evaluate your skills. In this repo, you will find the assets that are required to replicate the design that is also included in this repo. Both .sketch and .png assets are available.
 
