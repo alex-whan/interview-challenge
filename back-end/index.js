@@ -15,12 +15,11 @@ const mongooseOptions = {
 mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
 // mongoose.connect('mongodb://localhost:27017/colors', mongooseOptions);
 
+// COLOR SCRIPT
 // Script will add colors from offline dataset to MongoDB on server startup
-// Need to make sure they don't get saved more than once - check for dupes
 colorData.colors.map(async color => {
   try {
     await ColorModel.create(color);
-    // console.log('COLOR:', newColor);
   } catch (e) {
     console.log('ERROR', e);
   }
