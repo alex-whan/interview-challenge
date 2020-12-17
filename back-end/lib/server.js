@@ -4,12 +4,16 @@ const express = require('express');
 require('dotenv').config();
 const cors = require('cors');
 const app = express();
+const error404 = require('./middleware/404');
+const error500 = require('./middleware/500');
 
 // Global Middleware
 app.use(express.json());
 app.use(cors());
 
-// ERRORS GO HERE
+// ERRORS
+app.use('*', error404);
+app.use(error500);
 
 module.exports = {
   server: app,
