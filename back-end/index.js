@@ -21,8 +21,8 @@ colorData.colors.map(async color => {
   try {
     let newColor = await ColorModel.create(color);
     console.log('COLOR:', newColor);
-  } catch (error) {
-    console.log('ERROR', error);
+  } catch (e) {
+    console.log('ERROR', e);
   }
 });
 

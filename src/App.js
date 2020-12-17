@@ -4,7 +4,7 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import List from './components/List';
 import Detail from './components/Detail';
-import { Redirect, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import { randomizer } from './utils/utils';
 import { colors } from './data/colors';
 import randomColor from 'randomcolor';
