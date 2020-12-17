@@ -11,6 +11,10 @@ const error500 = require('./middleware/500');
 
 // GLOBAL MIDDLEWARE
 app.use(express.json());
+app.use(function (req, res, next) {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
 app.use(router);
 
 // ERRORS

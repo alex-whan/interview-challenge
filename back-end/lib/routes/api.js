@@ -9,7 +9,6 @@ router.get('/colors', handleGetColors);
 
 async function handleGetColors(req, res, next) {
   let colorsToGet = await colors.get();
-  console.log('GETTING COLORS', colorsToGet);
   res.status(200).json(colorsToGet);
 }
 
