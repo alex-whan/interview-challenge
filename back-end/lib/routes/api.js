@@ -4,8 +4,7 @@ const express = require('express');
 const router = express.Router();
 const color = require('../models/colors/colors-model');
 
-// Routes
-// Example:
+// ROUTES
 // router.post('/api/v1/:model', handlePost);
 router.get('/colors', handleGetColors);
 

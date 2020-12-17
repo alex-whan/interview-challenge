@@ -8,12 +8,10 @@ const router = require('../lib/routes/api');
 const error404 = require('./middleware/404');
 const error500 = require('./middleware/500');
 
-// Global Middleware
+// GLOBAL MIDDLEWARE
 app.use(express.json());
 app.use(cors());
 app.use(router);
-
-// should have a "routes" file like "app.get('URL/API endpoint") with the req/res and then it calls the appropriate function ('FIND') in MongoDB model and res.json results
 
 // ERRORS
 app.use('*', error404);

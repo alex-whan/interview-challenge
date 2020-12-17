@@ -1,11 +1,12 @@
 'use strict';
 
+// Generic "CRUD" class of Model to detach Color model from dependency on MongoDB specifically
 class Model {
   constructor(schema) {
     this.schema = schema;
   }
 
-  // read() performs a find() query in your schema
+  // performs a find() query on the passed-in schema
   get(_id) {
     if (_id) {
       let queryObject = _id ? { _id } : {};
@@ -15,7 +16,7 @@ class Model {
     }
   }
 
-  // create() performs a save() query in your schema for a new record
+  // performs a save() query in the schema for a new document
   create(record) {
     let newRecord = new this.schema(record);
     return newRecord.save();
@@ -32,5 +33,4 @@ class Model {
   // }
 }
 
-// Exports a class with CRUD methods, coded to work with your schema
 module.exports = Model;
