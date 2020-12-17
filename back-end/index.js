@@ -26,4 +26,5 @@ colorData.colors.map(async color => {
   }
 });
 
+// Starts up server on app start
 server.start(process.env.PORT);

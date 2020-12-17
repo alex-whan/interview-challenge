@@ -6,12 +6,15 @@ import List from './components/List';
 import Detail from './components/Detail';
 import { Route, Switch } from 'react-router-dom';
 import { randomizer } from './utils/utils';
-import { colors } from './data/colors';
+import { colors as offlineColors } from './data/colors';
 import randomColor from 'randomcolor';
+import dotenv from 'dotenv';
 
 const App = () => {
-  const [allColors, setAllColors] = useState(colors);
-  const [nextRandomColor, setNextRandomColor] = useState(randomizer(colors));
+  const [allColors, setAllColors] = useState(offlineColors);
+  const [nextRandomColor, setNextRandomColor] = useState(
+    randomizer(offlineColors)
+  );
   const [isLoading, setIsLoading] = useState(false);
 
   const getRandom = async () => {
@@ -34,8 +37,8 @@ const App = () => {
     const url = 'http://localhost:3001/colors';
     const res = await fetch(url);
     const colors = await res.json();
-    // console.log('COLORS ON FRONT END??', colors);
     return colors;
+    // console.log('COLORS ON FRONT END??', colors);
   };
 
   // Can accept either a hue name or hex code string - utilizes randomcolor utility
@@ -66,7 +69,7 @@ const App = () => {
   useEffect(async () => {
     setIsLoading(true);
     const newColors = await getColors();
-    newColors ? setAllColors(newColors) : setAllColors(colors);
+    newColors ? setAllColors(newColors) : setAllColors(offlineColors);
     setIsLoading(false);
   }, []);
 
