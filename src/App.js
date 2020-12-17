@@ -20,13 +20,25 @@ const App = () => {
     setNextRandomColor(randomized);
   };
 
+  // Using randomColors on front end only
+  // const getColors = async () => {
+  //   const randoms = await randomColor({ count: 120 });
+  //   const randomColors = randoms.map(color => {
+  //     return { code: color };
+  //   });
+  //   return randomColors;
+  // };
+
   // can just have this call the API endpoint instead
   const getColors = async () => {
-    const randoms = await randomColor({ count: 120 });
-    const randomColors = randoms.map(color => {
-      return { code: color };
-    });
-    return randomColors;
+    const url = 'http://localhost:3001/colors';
+    const res = await fetch(url);
+    const colors = await res.json();
+    console.log('COLORS ON FRONT END??', colors);
+    // const randomColors = randoms.map(color => {
+    //   return { code: color };
+    // });
+    // return randomColors;
   };
 
   // Can accept either a hue name or hex code string

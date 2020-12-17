@@ -10,9 +10,9 @@ const color = require('../models/colors/colors-model');
 router.get('/colors', handleGetColors);
 
 async function handleGetColors(req, res, next) {
-  console.log('GET COLORS FUNCTION');
   let colorsToGet = await color.get();
   res.status(200).json(colorsToGet);
+  console.log('GET COLORS FUNCTION RESPONSE', colorsToGet);
 }
 
 module.exports = router;
