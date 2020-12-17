@@ -7,12 +7,12 @@ const color = require('../models/colors/colors-model');
 // Routes
 // Example:
 // router.post('/api/v1/:model', handlePost);
-router.get('/colors', getColors);
+router.get('/colors', handleGetColors);
 
-async function getColors(req, res, next) {
+async function handleGetColors(req, res, next) {
   console.log('GET COLORS FUNCTION');
-  // let colorsToGet = await color.get();
-  // res.status(200).json(colorsToGet);
+  let colorsToGet = await color.get();
+  res.status(200).json(colorsToGet);
 }
 
 module.exports = router;
