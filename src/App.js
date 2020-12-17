@@ -24,6 +24,7 @@ const App = () => {
   };
 
   // Calls the API endpoint to populate "base" color dataset from database
+  // If no response from endpoint, colors are populated by offline dataset
   const getColors = async () => {
     try {
       const url = process.env.REACT_APP_API_URL;
