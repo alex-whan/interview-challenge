@@ -9,6 +9,7 @@ import { Route, Switch } from 'react-router-dom';
 import { randomizer } from './utils/utils';
 import { colors as offlineColors } from './data/colors';
 import randomColor from 'randomcolor';
+import axios from 'axios';
 
 const App = () => {
   const [allColors, setAllColors] = useState(offlineColors);
@@ -27,8 +28,9 @@ const App = () => {
   // If no response from endpoint, colors are populated by local dataset
   const getColors = async () => {
     try {
-      const url = `http://localhost:3001/colors`;
-      const res = await fetch(url);
+      // const url = `http://localhost:3001/colors`;
+      const url = `https://alex-whan-hh-interview.herokuapp.com/colors`;
+      const res = await axios.get(url);
       const colors = await res.json();
       return colors;
     } catch (e) {
