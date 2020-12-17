@@ -25,10 +25,14 @@ const App = () => {
 
   // Calls the API endpoint to populate "base" color dataset from database
   const getColors = async () => {
-    const url = process.env.REACT_APP_API_URL;
-    const res = await fetch(url);
-    const colors = await res.json();
-    return colors;
+    try {
+      const url = process.env.REACT_APP_API_URL;
+      const res = await fetch(url);
+      const colors = await res.json();
+      return colors;
+    } catch (e) {
+      return offlineColors;
+    }
   };
 
   // Can accept either a hue name or hex code string - utilizes randomcolor utility
