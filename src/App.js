@@ -27,7 +27,7 @@ const App = () => {
   // If no response from endpoint, colors are populated by offline dataset
   const getColors = async () => {
     try {
-      const url = `${process.env.REACT_APP_API_URL}/colors`;
+      const url = `http://localhost:3001/colors`;
       const res = await fetch(url);
       const colors = await res.json();
       return colors;
