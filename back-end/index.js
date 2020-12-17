@@ -10,6 +10,7 @@ const mongooseOptions = {
   useUnifiedTopology: true,
 };
 
-mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
+// mongoose.connect(process.env.MONGODB_URI, mongooseOptions);
+mongoose.connect('mongodb://localhost:27017/colors', mongooseOptions);
 
 server.start(process.env.PORT);
